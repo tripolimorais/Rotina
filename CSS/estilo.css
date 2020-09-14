@@ -1,8 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
+
        background-color:#2131307c;
     background-image:url("../img/img_floresta.jpg");
     background-blend-mode: multiply;
 }
 nav{
-    
+    background-color: #213130;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: row-reverse;
+
 }
+nav button{
+    height: 53px;
+    width: 105px;
+    font-size: 24px;
+
+}
+.tarefas{
+    background-color: #7B8D6C;
+    display: block;
+    margin: 30px;
+    padding: 15px;
+}
+
