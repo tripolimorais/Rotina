@@ -44,3 +44,9 @@ nav button{
     margin-top: 150px;
 }
 
+input{
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+}
+
