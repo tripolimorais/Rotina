@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Language" content="pt-br">
     <link href="CSS/estilo.css" rel="stylesheet">
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
@@ -14,12 +15,14 @@
     </nav>
 
     <main class="principal">
+
+
         <section class="containerTarefas">
-            <form>
+            <form class="formulario" onsubmit="envioFormulario">
                 <label>
                     tarefa
                 </label>
-                <input name="nome_tarefa"type="text">
+                <input name="nome_tarefa" type="text">
                 <label>
                     tipo da tarefa
                 </label>
@@ -34,18 +37,21 @@
                 <label>
                     Data
                 </label>
-                <input name="data"type="datetime-local">
-                <button type="submit">
-                    send
-                </button>
-                <button type="reset">
-                    reset
-                </button>
+                <input name="data" type="datetime-local">
+                <div>
+
+                    <button type="submit">
+                        send
+                    </button>
+                    <button type="reset">
+                        reset
+                    </button>
+                </div>
             </form>
         </section>
 
         <section class="containerTarefas">
-            <button class="tarefas">
+            <article class="tarefas">
                 <p>
                     tipo da tarefa
                 </p>
@@ -56,9 +62,9 @@
                 <p>
                     01/01/2020 12:00am
                 </p>
-            </button>
+            </article>
 
-            <button class="tarefas">
+            <article class="tarefas">
                 <p>
                     tipo da tarefa
                 </p>
@@ -69,9 +75,9 @@
                 <p>
                     01/01/2020 12:00am
                 </p>
-            </button>
+            </article>
 
-            <button class="tarefas">
+            <article class="tarefas">
                 <p>
                     tipo da tarefa
                 </p>
@@ -82,7 +88,7 @@
                 <p>
                     01/01/2020 12:00am
                 </p>
-            </button>
+            </article>
         </section>
     </main>
 

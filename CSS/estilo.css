@@ -32,6 +32,8 @@ nav button{
     display: flex;
     flex-direction: column;
     align-content: flex-end;
+    width: 70%;
+    
 }
 .containerTarefas{
     background-color: #212121;
@@ -39,6 +41,7 @@ nav button{
     padding: 20px 0;
     margin: auto;
     border-radius: 30px;
+    
 
 
 }
@@ -51,12 +54,20 @@ nav button{
     align-self: flex-end;
 }
 
-form{
-    margin: 5px;
+.formulario{
+    display: flex;
+    flex-direction: column;
     color: white;
+    padding: 5%;
+    font-size: 1.2em;
+}
 
+.formulario div{
+    margin-top: 20px;
+ 
 }
-label{
-    flex-direction: column 2;
-    
+button{
+    font-size: 1rem;
+    padding: 5px;
 }
+
