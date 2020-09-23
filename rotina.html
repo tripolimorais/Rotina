@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Language" content="pt-br">
     <link href="CSS/estilo.css" rel="stylesheet">
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 
 
         <section class="containerTarefas">
-            <form class="formulario" onsubmit="envioFormulario">
+            <form id="meu-formulario" class="formulario">
                 <label>
                     tarefa
                 </label>
@@ -38,7 +38,7 @@
                     Data
                 </label>
                 <input name="data" type="datetime-local">
-                <div>
+                
 
                     <button type="submit">
                         send
@@ -46,7 +46,7 @@
                     <button type="reset">
                         reset
                     </button>
-                </div>
+                
             </form>
         </section>
 
