@@ -1,20 +1,22 @@
 function enviouForm(evento) {
     evento.preventDefault();
+
     const article = document.createElement("article");
     article.classList.add("tarefas")
-    const p = document.createElement("p")
-    p.innerText = evento.target.tipoTarefa.value
-    article.appendChild(p)
+
+    criarElementoTarefa("p", article, evento.target.tipoTarefa.value )
+
     const input = document.createElement("input")
     input.setAttribute("type", "checkbox")
     input.classList.add("checkbox")
     article.appendChild(input)
-    const h1 = document.createElement("h1")
-    h1.innerText = evento.target.nome_tarefa.value
-    article.appendChild(h1)
+  
+    criarElementoTarefa("h1", article, evento.target.nome_tarefa.value )
+
+    criarElementoTarefa("p", article, evento.target.data.value)
+
+
     listaTarefas.appendChild(article)
-
-
 
 }
 
@@ -35,7 +37,11 @@ function tarefas() {
     formulario.addEventListener("submit", enviouForm)
 }
 
-
+function criarElementoTarefa(tag, elementoPai, valor){
+    const elementoHMTL = document.createElement(tag)
+    elementoPai.appendChild(elementoHMTL)
+    elementoHMTL.innerHTML = valor
+}
 
 
 /*
