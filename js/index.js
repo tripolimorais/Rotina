@@ -4,20 +4,31 @@ function enviouForm(evento) {
     const article = document.createElement("article");
     article.classList.add("tarefas")
 
-    criarElementoTarefa("p", article, evento.target.tipoTarefa.value )
+    criarElementoTarefa("p", article, evento.target.tipoTarefa.value)
 
-    const input = document.createElement("input")
-    input.setAttribute("type", "checkbox")
-    input.classList.add("checkbox")
-    article.appendChild(input)
-  
-    criarElementoTarefa("h1", article, evento.target.nome_tarefa.value )
+    
+
+    const checkbox = document.createElement("input")
+    checkbox.setAttribute("type", "checkbox")
+    checkbox.classList.add("checkbox")
+    article.appendChild(checkbox)
+    checkbox.addEventListener("change", completarTarefa)
+
+    criarElementoTarefa("h1", article, evento.target.nome_tarefa.value)
 
     criarElementoTarefa("p", article, evento.target.data.value)
 
-
+    const button = criarElementoTarefa("button", article,"apagar")
+    button.addEventListener("click", apagarTarefa)
     listaTarefas.appendChild(article)
 
+}
+function apagarTarefa(evento){
+    console.log("apagar tarefa",evento.target.parentElement.remove())
+}
+function completarTarefa(evento) {
+    const pai = evento.target.parentElement
+    pai.classList.toggle("fundoRoxo")
 }
 
 let listaTarefas
@@ -37,12 +48,14 @@ function tarefas() {
     formulario.addEventListener("submit", enviouForm)
 }
 
-function criarElementoTarefa(tag, elementoPai, valor){
+function criarElementoTarefa(tag, elementoPai, valor) {
     const elementoHMTL = document.createElement(tag)
     elementoPai.appendChild(elementoHMTL)
     elementoHMTL.innerHTML = valor
+    return elementoHMTL
 }
 
+addEventListener
 
 /*
 <article class="tarefas">
